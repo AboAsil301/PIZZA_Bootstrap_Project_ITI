@@ -3,397 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pizza Hut</title>
+    <title>S4 Client Documentation</title>
     <!-- Include Bootstrap CSS and Font Awesome -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
     
     <!-- Internal Styles -->
     <style>
-        .navbar {
-            z-index: 2;
-            padding: 0;
-            margin-bottom: 0px;
+        /* Custom Styles Go Here */
+        body {
+            background-color: #f8f9fa; /* Light background */
         }
-
-        .nav-item {
-            padding: 0;
-            margin-bottom: -15px;
-            margin-left: 0px;
+        .logo p {
+            font-size: 14px;
+            font-weight: bold;
+            font-family: monospace;
         }
-
-        .nav-btn {
-            width: 100%;
-            height: 50px;
-            border-top: 1px solid rgb(110, 110, 110);
-            border-right: 0px solid rgb(110, 110, 110);
-            border-bottom: 0px;
-            background-color: inherit;
-            font-weight: bolder;
-            font-size: larger;
-        }
-
-        .nav-btn.deals {
-            background-color: rgb(255, 143, 0);
-        }
-
-        .nav-btn.order {
-            margin-top: -8px;
-            background-color: rgb(206, 0, 25);
-            box-shadow: 0 0 8px rgb(50, 50, 50);
-            border-radius: 6px;
-            height: 65px;
-        }
+        /* Additional styles go here */
     </style>
 </head>
-<body class="bg-body-tertiary">
+<body class="bg-body-light">
     <header>
         <!-- Header Container -->
-        <div class="container-fluid bg-light-subtle py-2" style="width: 100%;">
+        <div class="container bg-light-subtle pt-1 mt-2 " style="width: 100%;">
             <div class="row">
-                <!-- Logo -->
                 <div class="col-2 col-lg-6 logo ps-2">
-                    <img src="PizzaHtLogo.png">
+                    <p class="btn text-dark fs-0 fw-bold font-monospace">S4.WebClient</p>
+                    <p class="btn text-dark fs-0 fw-bold font-monospace">Home</p>
+                    <p class="btn text-dark fs-0 fw-bold font-monospace">Privacy</p>
                 </div>
-                <!-- Navigation and Contact Info -->
                 <div class="col-10 col-lg-6 text-end">
-                    <div class="row">
-                        <!-- Navigation Links -->
-                        <div class="col-12">
-                            <p class="btn text-dark fs-0 fw-bold font-monospace">SIGN IN</p>
-                            <p class="btn text-dark fs-0 fw-bold font-monospace">CREATE AN ACCOUNT</p>
-                            <p class="btn text-dark fs-0 fw-bold font-monospace">FIND A PIZZA HUT</p>
-                            <p class="btn  lang  text-danger fs-0 fw-bold font-monospace">عربي</p>
-                        </div>
-                        <!-- Contact Information -->
-                        <div class="col-12">
-                            <a href="tel:19000" class="btn py-1 my-1 text-dark  fw-bold font-monospace">
-                                <i class="fa-solid fa-phone fa-xl"></i>
-                                CALL US-19000
-                            </a>
-                            <img id="halal" src="Halal-3.png" width="30px" height="30px">
-                        </div>
-                    </div>
+                    <p class="btn text-dark fs-0 fw-bold font-monospace">Hello assil@365Architect.com!</p>
+                    <p class="btn text-dark fs-0 fw-bold font-monospace">SIGN out</p>
                 </div>
-            </div>
-        </div>
-        
-
-        
-        <!-- Navigation Bar -->
-        <div class="row py-2" >
-            <nav class="navbar navbar-expand-lg navbar-light bg-white align-items-end justify-content-center">
-                <button 
-                    class="navbar-toggler" 
-                    type="button" 
-                    data-bs-toggle="collapse" 
-                    data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" 
-                    aria-expanded="false" 
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav w-100">
-                        <li class="nav-item col">
-                            <button class="nav-btn">PIZZA</button>
-                        </li>
-                        <li class="nav-item col">
-                            <button class="nav-btn">STARTERS</button>
-                        </li>
-                        <li class="nav-item col">
-                            <button class="nav-btn">SALADS</button>
-                        </li>
-                        <li class="nav-item col dropdown">
-                            <button class="nav-btn dropdown-toggle" type="button" id="moreMenu"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                MORE
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="moreMenu">
-                                <li><a class="dropdown-item" href="#">Item 1</a></li>
-                                <li><a class="dropdown-item" href="#">Item 2</a></li>
-                                <li><a class="dropdown-item" href="#">Item 3</a></li>
-                                <li><a class="dropdown-item" href="#">Item 4</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item col">
-                            <button class="nav-btn deals">DEALS</button>
-                        </li>
-                        <li class="nav-item col-lg-5 col-md-12">
-                            <button class="nav-btn order text-white  btn-shadow overflow-top">START
-                                YOUR ORDER</button>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-
-        <!-- Cover Photo -->
-        <div class="container-fluid cover-photo px-0  position-relative max">
-            <img src="3.png" alt="Cover Photo" class="img-fluid cover-image" style="width: 100%; height: 10rem;">
-            <!-- Navigation for Food Categories -->
-            <div class="container-fluid fs-5 darkShadow row mx-0 py-2 text-bg-dark bg-opacity-75 position-absolute bottom-0"
-                style="width: 100%; ">
-                <ul class="nav nav-pills nav-fill">
-                    <li class="nav-item ">
-                        <a class="nav-link-transparent text-white active " aria-current="page" href="#">ALL</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">BEEF</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">CHICKEN</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">VEGETERIAN</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">SPECIALITY</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">EXTREME PIZZA</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">SEA FOOD</a>
-                    </li>
-                </ul>
             </div>
         </div>
     </header>
 
 
     <main>
-              <!-- Product Cards -->
-        <div class="container g-1 mt-3">
-            <div class="row ">
-                <div class="col-lg-6">
-                    <div class="card mb-3" style="max-width: 540px;">
-                        <div class="row g-1">
-                            <div class="col-4">
-                                <div class="row">
-                                    <img src="4.png" class="img-fluid rounded-start mt-4  ms-2" alt="image">
-                                </div>
-                                <div class="row">
-                                    <span class="title total-price fs-4 fw-bold font-monospace ms-3">EGP 174.00</span>
-                                </div>
-                            </div>
-
-                            <div class="col-8">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <h5 class="card-title text-danger fw-bold">Super Supreme</h5>
-                                        <p class="card-text fs-6 ">Our famous combination of Beef Pepperoni , juicy Beef
-                                            ,
-                                            Mushrooms , Green Peppers , Onions , Black Olives and melting mozzarella
-                                            cheese.</p>
-                                    </div>
-                                    <div class="row g-1 mt-2">
-                                        <div class="col-7">
-                                            <select class="form-select form-select " name="Crust" id="Crust">
-                                                <option value="Pan">Pan</option>
-                                                <option value="Thin">Thin</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-5">
-                                            <select class="form-select form-select " name="Size" id="Size">
-                                                <option value="Small">Small</option>
-                                                <option value="Medium" selected>Medium</option>
-                                                <option value="Large">Large</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="row g-1 mt-2 align-items-center">
-                                        <div class="col-5">
-                                            <button class="btn btn-md text-bg-secondary px-sm-4">CUSTOMIZE</button>
-                                        </div>
-                                        <div class="col-7">
-                                            <button class="btn btn-lg text-bg-danger px-sm-4 ms-sm-2">ADD TO
-                                                CART</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <div class="container mt-4">
+            <h1 class="text-center ">S4 Service Client</h1>
+            <p class="text-center">S4 stands for Secure Shared Storage Service, which is a restful API that provides a mechanism to share files between team (not individuals) in a secure way.</p>
+            <form>
+                <div class="mb-3">
+                    <label for="serviceURL" class="form-label">ServiceURL</label>
+                    <input type="text" id="serviceURL" class="form-control" placeholder="" disabled>
+                    <small class="form-text text-muted">this is the URL that you used to send the request.</small>
                 </div>
-                <div class="col-lg-6">
-                    <div class="card mb-3" style="max-width: 540px;">
-                        <div class="row g-1">
-                            <div class="col-4 align-items-center">
-                                <div class="row">
-                                    <img src="5.png" class="img-fluid rounded-start mt-4  ms-2" alt="image">
-                                </div>
-                                <div class="row">
-                                    <span class="title total-price fs-4 fw-bold font-monospace ms-3">EGP 159.00</span>
-                                </div>
-                            </div>
-
-                            <div class="col-8">
-                                <div class="card-body align-items-center">
-                                    <div class="row">
-                                        <h5 class="card-title text-danger fw-bold">Classic Pepperoni</h5>
-                                        <p class="card-text fs-6 ">Our famous combination of Beef Pepperoni , juicy Beef
-                                            ,
-                                            Mushrooms , Green Peppers , Onions , Black Olives and melting mozzarella
-                                            cheese.</p>
-                                    </div>
-                                    <div class="row g-1 mt-2">
-                                        <div class="col-7">
-                                            <select class="form-select form-select " name="Crust" id="Crust">
-                                                <option value="Pan">Pan</option>
-                                                <option value="Thin">Thin</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-5">
-                                            <select class="form-select form-select " name="Size" id="Size">
-                                                <option value="Small">Small</option>
-                                                <option value="Medium" selected>Medium</option>
-                                                <option value="Large">Large</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="row g-1 mt-2 align-items-center">
-                                        <div class="col-5">
-                                            <button class="btn btn-md text-bg-secondary px-sm-4">CUSTOMIZE</button>
-                                        </div>
-                                        <div class="col-7">
-                                            <button class="btn btn-lg text-bg-danger px-sm-4 ms-sm-2">ADD TO
-                                                CART</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="mb-3">
+                    <label for="disabledTextInput" class="form-label">Blob Name</label>
+                    <input type="text" id="disabledTextInput" class="form-control" placeholder="Blob Name" >
+                    <small class="form-text text-muted">blob name</small>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="card mb-3" style="max-width: 540px;">
-                        <div class="row g-1">
-                            <div class="col-4 align-items-center">
-                                <div class="row">
-                                    <img src="6.png" class="img-fluid rounded-start mt-4  ms-2" alt="image">
-                                </div>
-                                <div class="row">
-                                    <span class="title total-price fs-4 fw-bold font-monospace ms-3">EGP 174.00</span>
-                                </div>
-                            </div>
-
-                            <div class="col-8">
-                                <div class="card-body align-items-center">
-                                    <div class="row">
-                                        <h5 class="card-title text-danger fw-bold">Chicken Supreme</h5>
-                                        <p class="card-text fs-6 ">Our famous combination of Beef Pepperoni , juicy Beef
-                                            ,
-                                            Mushrooms , Green Peppers , Onions , Black Olives and melting mozzarella
-                                            cheese.</p>
-                                    </div>
-                                    <div class="row g-1 mt-2">
-                                        <div class="col-7">
-                                            <select class="form-select form-select " name="Crust" id="Crust">
-                                                <option value="Pan">Pan</option>
-                                                <option value="Thin">Thin</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-5">
-                                            <select class="form-select form-select " name="Size" id="Size">
-                                                <option value="Small">Small</option>
-                                                <option value="Medium" selected>Medium</option>
-                                                <option value="Large">Large</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="row g-1 mt-2 align-items-center">
-                                        <div class="col-5">
-                                            <button class="btn btn-md text-bg-secondary px-sm-4">CUSTOMIZE</button>
-                                        </div>
-                                        <div class="col-7">
-                                            <button class="btn btn-lg text-bg-danger px-sm-4 ms-sm-2">ADD TO
-                                                CART</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="mb-3">
+                    <label for="disabledTextInput" class="form-label">Key Name</label>
+                    <input type="text" id="disabledTextInput" class="form-control" placeholder="" >
+                    <small class="form-text text-muted">key name</small>
                 </div>
-                <div class="col-lg-6">
-                    <div class="card mb-3" style="max-width: 540px;">
-                        <div class="row g-1">
-                            <div class="col-4 align-items-center">
-                                <div class="row">
-                                    <img src="7.png" class="img-fluid rounded-start mt-4  ms-2" alt="image">
-                                </div>
-                                <div class="row">
-                                    <span class="title total-price fs-4 fw-bold font-monospace ms-3">EGP 199.00</span>
-                                </div>
-                            </div>
-
-                            <div class="col-8">
-                                <div class="card-body align-items-center">
-                                    <div class="row">
-                                        <h5 class="card-title text-danger fw-bold">Spicy Chicken Ranch</h5>
-                                        <p class="card-text fs-6 ">Our famous combination of Beef Pepperoni , juicy Beef
-                                            ,
-                                            Mushrooms , Green Peppers , Onions , Black Olives and melting mozzarella
-                                            cheese.</p>
-                                    </div>
-                                    <div class="row g-1 mt-2">
-                                        <div class="col-7">
-                                            <select class="form-select" name="Crust" id="Crust">
-                                                <option value="Pan">Pan</option>
-                                                <option value="Thin">Thin</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-5">
-                                            <select class="form-select" name="Size" id="Size">
-                                                <option value="Small">Small</option>
-                                                <option value="Medium" selected>Medium</option>
-                                                <option value="Large">Large</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="row g-1 mt-2 align-items-center">
-                                        <div class="col-5">
-                                            <button class="btn btn-md text-bg-secondary px-sm-4">CUSTOMIZE</button>
-                                        </div>
-                                        <div class="col-7">
-                                            <button class="btn btn-lg text-bg-danger px-sm-4 ms-sm-2">ADD TO
-                                                CART</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="mb-3">
+                    <label for="disabledTextInput" class="form-label">Key Version</label>
+                    <input type="text" id="disabledTextInput" class="form-control" placeholder="Key Version" >
+                    <small class="form-text text-muted">key version</small>
                 </div>
-            </div>
+                <div class="mb-3">
+                    <label for="disabledTextInput" class="form-label">Content</label>
+                    <textarea class="form-control" style="height: 200px;" id="disabledTextInput" placeholder="Content"> </textarea>
+                    <small class="form-text text-muted">Content</small>
+                </div>
+                <div>
+                    <button type="button" class="btn btn-primary">EncryptOnly</button>
+                    <button type="button" class="btn btn-success">DecryptOnly</button>
+                    <button type="button" class="btn btn-primary">StoreData</button>
+                    <button type="button" class="btn btn-success">GetData</button>
+                    <button type="button" class="btn btn-danger">DeleteData</button>
+                </div>
+                <div>
+                    <p class="mt-2"><mark>Content</mark> <br><mark>Location</mark></p>
+                    
+                </div>
+            </form>
         </div>
+        
     </main>
     <footer>
-        <!-- Footer Section (Commented out for now) -->
-        <!-- 
-        <footer class="bg-dark text-light text-center py-3">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <h4>Contact Us</h4>
-                        <p>Email: ahmedredaabdelbaset@gmail.com</p>
-                        <p>Phone: 01094597301</p>
-                    </div>
-                    <div class="col-md-6">
-                        <h4>Follow Us</h4>
-                        <a href="https://www.facebook.com/profile.php?id=100008969832609"><i
-                                class="fab fa-facebook-square fa-2x mx-2"></i></a>
-                        <a href=""><i class="fab fa-twitter-square fa-2x mx-2"></i></a>
-                        <a href="#"><i class="fab fa-instagram-square fa-2x mx-2"></i></a>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        -->
+        
     </footer>
 
     <!-- Include Bootstrap JS -->
